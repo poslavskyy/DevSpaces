@@ -1,0 +1,8 @@
+schemaVersion: 2.2.0
+metadata:
+  name: my-workspace
+components:
+  - name: tools
+    container:
+      image: registry.access.redhat.com/ubi9/ubi
+      command: ["/bin/sh", "-c", "sleep infinity"]
