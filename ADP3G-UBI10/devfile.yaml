@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: my-workspace
+  name: my-workspace-ubi10
 components:
   - name: tools
     container:
