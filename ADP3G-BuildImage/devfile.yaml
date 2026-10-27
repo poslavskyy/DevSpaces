@@ -1,6 +1,14 @@
 schemaVersion: 2.2.0
 metadata:
   name: yuriy-wrk
+projects:
+  - name: angular-example
+    git:
+      remotes:
+        origin: "https://gitea-cedp-scm.apps.aro01.prd.ocp.az.cldsvcs.net/xx3g/angular-example.git"
+      checkoutFrom:
+        revision: "develop"
+        remote: origin
 components:
   - name: image
     container:
