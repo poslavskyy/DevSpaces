@@ -1,0 +1,12 @@
+schemaVersion: 2.2.0
+metadata:
+  name: yuriy-wrk
+components:
+  - name: image
+    container:
+      image: artifactory-cedp-bin.apps.aro01.prd.ocp.az.cldsvcs.net/adp3g-docker-internal-development-local/ca.gc.cra.rc3g/adp3g-build:2.2.0-20261020.133058-115
+      memoryRequest: 1536Mi
+      command: ['/usr/bin/podman', 'system', 'service', '--time', '0', 'unix:///run/user/1000/docker.sock']
+      env:
+        - name: JAVA_HOME
+          value: /opt/jdk
