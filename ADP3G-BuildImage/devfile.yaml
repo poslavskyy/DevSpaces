@@ -28,5 +28,3 @@ components:
           value: --no-transfer-progress
         - name: DOCKER_HOST
           value: unix:///run/user/1000/docker.sock
-        - name: TESTCONTAINERS_RYUK_DISABLED
-          value: 'true'
