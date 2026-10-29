@@ -1,0 +1,32 @@
+schemaVersion: 2.2.0
+metadata:
+  name: quarkus-oauth
+projects:
+  - name: quarkus-oauth
+    git:
+      remotes:
+        origin: "https://gitea-cedp-scm.apps.aro01.prd.ocp.az.cldsvcs.net/xx3g/quarkus-oauth.git"
+      checkoutFrom:
+        revision: "develop"
+        remote: origin
+components:
+  - name: image
+    container:
+      image: artifactory-cedp-bin.apps.aro01.prd.ocp.az.cldsvcs.net/adp3g-docker-internal-development-local/ca.gc.cra.rc3g/adp3g-build:2.2.0-20261020.133058-115
+      memoryRequest: 1536Mi
+      command:
+        - /usr/bin/podman
+        - system
+        - service
+        - --time
+        - '0'
+        - unix:///run/user/1000/docker.sock
+      env:
+        - name: PATH
+          value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/maven/bin:/opt/jdk/bin
+        - name: MAVEN_ARGS
+          value: --no-transfer-progress
+        - name: DOCKER_HOST
+          value: unix:///run/user/1000/docker.sock
+        - name: TESTCONTAINERS_RYUK_DISABLED
+          value: 'true'
